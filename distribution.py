@@ -37,7 +37,7 @@ Notice about this example:
 * Letters that do not occur in the text are not listed in the output at all.
 """
 s=input("Please enter a string of text (the bigger the better): ")
-print('The distribution of characters in "{0}" is:'.format(s))
+print('The distribution of characters in "{0}" is: '.format(s))
 s=s.lower()
 
 import string
