@@ -1,7 +1,7 @@
 """
 distribution.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Emma Tysinger
+Credit: https://docs.python.org/3.3/tutorial/datastructures.html (how to unpack tuples)
 
 Assignment:
 
@@ -36,3 +36,27 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
+s=input("Please enter a string of text (the bigger the better): ")
+print('The distribution of characters in "{0}" is:'.format(s))
+s=s.lower()
+
+import string
+abc=list(string.ascii_lowercase)
+count=[]
+letter=[]
+
+for i in abc:
+    ltrcount=s.count(i)
+    count.append(ltrcount)
+    letter.append(i)
+pairs=zip(count,letter)
+pairs=list(pairs)
+pairs=sorted(pairs)
+pairs=pairs[::-1]
+
+for i in pairs:
+    n,l=i
+    print(n*l)
+
+
+
