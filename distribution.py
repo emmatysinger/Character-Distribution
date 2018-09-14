@@ -42,21 +42,16 @@ s=s.lower()
 
 import string
 abc=list(string.ascii_lowercase)
-count=[]
 letter=[]
 
 for i in abc:
     ltrcount=s.count(i)
-    count.append(ltrcount)
-    letter.append(i)
-pairs=zip(count,letter)
-pairs=list(pairs)
-pairs=sorted(pairs)
-pairs=pairs[::-1]
+    letter.append(i*ltrcount)
+
+pairs=sorted(letter,key=len, reverse=True)
 
 for i in pairs:
-    n,l=i
-    print(n*l)
+    print(i)
 
 
 
